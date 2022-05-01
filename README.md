@@ -17,11 +17,11 @@
 
 ## 2. Key Criteria considered - 
 
-Must be able to start from a cloned git repo.
-Must document any prerequisites clearly.
-Must be contained within a GitHub repository.
-Must deploy via an automated process.
-Must deploy infrastructure using code.
+- Must be able to start from a cloned git repo. <br />
+- Must document any prerequisites clearly. <br />
+- Must be contained within a GitHub repository. <br />
+- Must deploy via an automated process. <br />
+- Must deploy infrastructure using code. <br />
 
 
 ## 3. New Files created to cater the solution are as below - 
