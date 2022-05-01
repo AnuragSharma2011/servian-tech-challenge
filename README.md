@@ -7,11 +7,11 @@
 
 ## 1. High Level Design - 
 
-Created entry point using Amazon Route 53 to effectively connects user requests to infrastructure running in AWS – such as Amazon ECS. Cluster, Elastic Load Balancing load balancers, or Amazon S3 buckets. <br />
-Created AWS ALB (Application Load Balancer) to automatically distributes incoming traffic from Route 53 across multiple targets, such as ECS Tasks, containers, and in one or more Availability Zones. Also had listners at port 80 for all http requests.<br />
-Created an ECS cluster with default VPC and multiple subnets so that requests from ALB can be distributed as per requiements. Also AWS FARGATE was used as it easily scales up and down without fixed resources defined beforehand.<br />
-Created RDS Aurora Postgres to provide backend DB support for the application. (To start with currently it will deploy a single replica for the database and only 2 ECS tasks)<br />
-To control inbound and outbound traffic, 3 security groups are added, on the server with inbound 3000 from the load balancer and outbound to everywhere, on the database with inbound 5432 from server, with no outbound, and on the load balancer with inbound from 80 and 443 for all and outbound 3000 for all for healthchecks.<br />
+- Created entry point using Amazon Route 53 to effectively connects user requests to infrastructure running in AWS – such as Amazon ECS. Cluster, Elastic Load Balancing load balancers, or Amazon S3 buckets. <br />
+- Created AWS ALB (Application Load Balancer) to automatically distributes incoming traffic from Route 53 across multiple targets, such as ECS Tasks, containers, and in one or more Availability Zones. Also had listners at port 80 for all http requests.<br />
+- Created an ECS cluster with default VPC and multiple subnets so that requests from ALB can be distributed as per requiements. Also AWS FARGATE was used as it easily scales up and down without fixed resources defined beforehand.<br />
+- Created RDS Aurora Postgres to provide backend DB support for the application. (To start with currently it will deploy a single replica for the database and only 2 ECS tasks)<br />
+- To control inbound and outbound traffic, 3 security groups are added, on the server with inbound 3000 from the load balancer and outbound to everywhere, on the database with inbound 5432 from server, with no outbound, and on the load balancer with inbound from 80 and 443 for all and outbound 3000 for all for healthchecks.<br />
 
 
 
