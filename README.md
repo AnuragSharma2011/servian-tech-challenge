@@ -24,8 +24,21 @@ Must deploy via an automated process.
 Must deploy infrastructure using code.
 
 
+## 3. New Files created to cater the solution are as below - 
 
-## 3. Technology Stack Used for Solution
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/app.tf
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/config.tf
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/data.tf
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/db.tf
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/iam.tf
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/outputs.tf
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/variables.tf
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/db_update.sh
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/Makefile
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/.github/workflows/terraform-infra-and-deployment.yml
+
+
+## 4. Technology Stack Used for Solution
 
 ### Amazon Web Services (AWS)
 
@@ -81,7 +94,7 @@ GitHub Actions were used to automate the Infrastructure provisioning and deploym
 
 ---
 
-## 4. How to deploy
+## 5. How to deploy
 
 ### Dependencies 
 
@@ -179,7 +192,7 @@ https://github.com/AnuragSharma2011/servian-tech-challenge/actions
 
 ---
 
-## 5. Challenges
+## 6. Challenges
 
 - It was really challenging to deploy the entire stack on AWS. It was first time, I was deploying a whole application with frontend and backend using ECS (used EC2 a few times in past)So I had to learn to run containers on AWS, Load Balancers.
 
@@ -189,7 +202,7 @@ https://github.com/AnuragSharma2011/servian-tech-challenge/actions
 
 ---
 
-## 6. Future Recommendations
+## 7. Future Recommendations
 
 - Make the URL secure and accessible on https.
 
