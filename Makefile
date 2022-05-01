@@ -14,7 +14,7 @@ refresh:
 	docker-compose run terraform apply -refresh-only
 
 update_db:
-	cd IaC && ./db_update.sh
+	cd IaC && sudo ./db_update.sh
 
 destroy:
 	docker-compose run terraform destroy -auto-approve
