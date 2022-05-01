@@ -7,11 +7,11 @@
 
 ## 1. High Level Design - 
 
-Created entry point using Amazon Route 53 to effectively connects user requests to infrastructure running in AWS – such as Amazon ECS. Cluster, Elastic Load Balancing load balancers, or Amazon S3 buckets 
-Created AWS ALB (Application Load Balancer) to automatically distributes incoming traffic from Route 53 across multiple targets, such as ECS Tasks, containers, and in one or more Availability Zones. Also had listners at port 80 for all http requests.
-Created an ECS cluster with default VPC and multiple subnets so that requests from ALB can be distributed as per requiements. Also AWS FARGATE was used as it easily scales up and down without fixed resources defined beforehand.
-Created RDS Aurora Postgres to provide backend DB support for the application. (To start with currently it will deploy a single replica for the database and only 2 ECS tasks)
-To control inbound and outbound traffic, 3 security groups are added, on the server with inbound 3000 from the load balancer and outbound to everywhere, on the database with inbound 5432 from server, with no outbound, and on the load balancer with inbound from 80 and 443 for all and outbound 3000 for all for healthchecks.
+Created entry point using Amazon Route 53 to effectively connects user requests to infrastructure running in AWS – such as Amazon ECS. Cluster, Elastic Load Balancing load balancers, or Amazon S3 buckets. <br />
+Created AWS ALB (Application Load Balancer) to automatically distributes incoming traffic from Route 53 across multiple targets, such as ECS Tasks, containers, and in one or more Availability Zones. Also had listners at port 80 for all http requests.<br />
+Created an ECS cluster with default VPC and multiple subnets so that requests from ALB can be distributed as per requiements. Also AWS FARGATE was used as it easily scales up and down without fixed resources defined beforehand.<br />
+Created RDS Aurora Postgres to provide backend DB support for the application. (To start with currently it will deploy a single replica for the database and only 2 ECS tasks)<br />
+To control inbound and outbound traffic, 3 security groups are added, on the server with inbound 3000 from the load balancer and outbound to everywhere, on the database with inbound 5432 from server, with no outbound, and on the load balancer with inbound from 80 and 443 for all and outbound 3000 for all for healthchecks.<br />
 
 
 
@@ -26,16 +26,16 @@ Must deploy infrastructure using code.
 
 ## 3. New Files created to cater the solution are as below - 
 
-https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/app.tf
-https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/config.tf
-https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/data.tf
-https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/db.tf
-https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/iam.tf
-https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/outputs.tf
-https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/variables.tf
-https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/db_update.sh
-https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/Makefile
-https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/.github/workflows/terraform-infra-and-deployment.yml
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/app.tf <br />
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/config.tf <br />
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/data.tf <br />
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/db.tf <br />
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/iam.tf <br />
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/outputs.tf <br />
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/variables.tf <br />
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/IaC/db_update.sh <br />
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/Makefile <br />
+https://github.com/AnuragSharma2011/servian-tech-challenge/blob/master/.github/workflows/terraform-infra-and-deployment.yml <br />
 
 
 ## 4. Technology Stack Used for Solution
